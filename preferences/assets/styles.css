@@ -1,0 +1,716 @@
+/* ============================================
+   Nerd Enterprises — Privacy Site Stylesheet
+   ============================================ */
+
+:root {
+  /* Brand colors */
+  --green:        #00B01E;
+  --green-dark:   #028D19;
+  --cyan:         #2CB0E8;
+  --cyan-dark:    #218FBD;
+  --navy:         #003B8E;
+  --yellow:       #FFEA00;
+
+  /* Functional colors */
+  --text:         #1a2230;
+  --text-muted:   #5a6478;
+  --border:       #e3e7ee;
+  --bg:           #ffffff;
+  --bg-soft:      #f6f9fc;
+  --bg-card:      #ffffff;
+  --error:        #c0392b;
+  --success-bg:   #e8f7ec;
+  --success-text: #166534;
+
+  /* Typography */
+  --font-sans:    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono:    ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+
+  /* Layout */
+  --content-max:  860px;
+  --radius:       8px;
+  --radius-lg:    12px;
+  --shadow-sm:    0 1px 2px rgba(0, 59, 142, 0.05);
+  --shadow-md:    0 4px 12px rgba(0, 59, 142, 0.08);
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg-soft);
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* ============================================
+   Header
+   ============================================ */
+
+.site-header {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: var(--shadow-sm);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
+  flex-wrap: wrap;
+}
+
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  color: var(--navy);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.site-nav a:hover {
+  color: var(--green-dark);
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--green-dark);
+  border-bottom-color: var(--green);
+}
+
+/* ============================================
+   Main content
+   ============================================ */
+
+.main-content {
+  padding: 2.5rem 1.25rem 4rem;
+}
+
+.hero {
+  margin-bottom: 2.5rem;
+}
+
+.hero h1 {
+  font-size: 2.25rem;
+  line-height: 1.2;
+  margin: 0 0 0.75rem;
+  color: var(--navy);
+  letter-spacing: -0.02em;
+}
+
+.lede {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  margin: 0;
+  max-width: 65ch;
+}
+
+/* ============================================
+   Cards & sections
+   ============================================ */
+
+.rights-card,
+.form-section,
+.contact-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.rights-card h2,
+.form-section h2,
+.contact-card h2 {
+  font-size: 1.375rem;
+  margin: 0 0 1rem;
+  color: var(--navy);
+}
+
+.rights-card p,
+.contact-card p {
+  margin: 0 0 1rem;
+}
+
+.rights-card p:last-child,
+.contact-card p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: var(--cyan-dark);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: var(--navy);
+}
+
+/* ============================================
+   Form
+   ============================================ */
+
+.privacy-form {
+  margin-top: 0.5rem;
+}
+
+.form-group {
+  border: none;
+  padding: 0;
+  margin: 0 0 2rem;
+}
+
+.form-group legend {
+  font-weight: 600;
+  font-size: 1.0625rem;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+  padding: 0;
+}
+
+.field {
+  margin-bottom: 1.25rem;
+}
+
+.field:last-child {
+  margin-bottom: 0;
+}
+
+.field label,
+.inline-radio legend {
+  display: block;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  margin-bottom: 0.375rem;
+  color: var(--text);
+}
+
+.required {
+  color: var(--error);
+  font-weight: 600;
+}
+
+.field-help {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  margin: 0.375rem 0 0;
+  line-height: 1.5;
+}
+
+.field-error {
+  font-size: 0.8125rem;
+  color: var(--error);
+  margin: 0.375rem 0 0;
+  min-height: 1.2em;
+  font-weight: 500;
+}
+
+.field-error:empty { display: none; }
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--text);
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 3px rgba(44, 176, 232, 0.18);
+}
+
+input[aria-invalid="true"],
+textarea[aria-invalid="true"],
+select[aria-invalid="true"] {
+  border-color: var(--error);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: inherit;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23003B8E' stroke-width='1.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.875rem center;
+  padding-right: 2.5rem;
+}
+
+/* Honeypot — hidden from users, visible to bots */
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Radio cards (request type) */
+.radio-group {
+  display: grid;
+  gap: 0.625rem;
+  margin-top: 0.75rem;
+}
+
+.radio-card {
+  display: flex;
+  gap: 0.875rem;
+  align-items: flex-start;
+  padding: 0.875rem 1rem;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: border-color 0.15s, background-color 0.15s;
+  background: var(--bg);
+}
+
+.radio-card:hover {
+  border-color: var(--cyan);
+  background: rgba(44, 176, 232, 0.04);
+}
+
+.radio-card input[type="radio"] {
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+  accent-color: var(--green);
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.radio-card:has(input:checked) {
+  border-color: var(--green);
+  background: rgba(0, 176, 30, 0.04);
+}
+
+.radio-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  flex: 1;
+}
+
+.radio-card-content strong {
+  font-weight: 600;
+  color: var(--text);
+  font-size: 0.9375rem;
+}
+
+.radio-card-desc {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Checkbox group (products) */
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.checkbox-item {
+  display: flex;
+  gap: 0.625rem;
+  align-items: center;
+  padding: 0.625rem 0.875rem;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: border-color 0.15s, background-color 0.15s;
+  background: var(--bg);
+  font-size: 0.9375rem;
+}
+
+.checkbox-item:hover {
+  border-color: var(--cyan);
+  background: rgba(44, 176, 232, 0.04);
+}
+
+.checkbox-item input[type="checkbox"] {
+  flex-shrink: 0;
+  accent-color: var(--green);
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.checkbox-item:has(input:checked) {
+  border-color: var(--green);
+  background: rgba(0, 176, 30, 0.04);
+}
+
+/* Inline radios (current customer) */
+.inline-radio {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.inline-radio-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.inline-radio-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 0.9375rem;
+  transition: border-color 0.15s, background-color 0.15s;
+  background: var(--bg);
+}
+
+.inline-radio-item:hover { border-color: var(--cyan); }
+
+.inline-radio-item input[type="radio"] {
+  accent-color: var(--green);
+}
+
+.inline-radio-item:has(input:checked) {
+  border-color: var(--green);
+  background: rgba(0, 176, 30, 0.04);
+}
+
+/* Consent checkbox */
+.consent-item {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  padding: 1rem;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  background: var(--bg-soft);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.consent-item input[type="checkbox"] {
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+  accent-color: var(--green);
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+/* Submit area */
+.form-actions {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.btn {
+  font: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.15s, transform 0.05s, box-shadow 0.15s;
+}
+
+.btn-primary {
+  background: var(--green);
+  color: white;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--green-dark);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-note {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin: 0;
+  max-width: 50ch;
+}
+
+/* Feedback messages */
+.form-feedback {
+  margin-top: 1.5rem;
+}
+
+.form-feedback:empty { display: none; }
+
+.form-feedback.success {
+  padding: 1.25rem 1.5rem;
+  background: var(--success-bg);
+  border: 1px solid var(--success-text);
+  border-radius: var(--radius);
+  color: var(--success-text);
+}
+
+.form-feedback.success h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.0625rem;
+  color: var(--success-text);
+}
+
+.form-feedback.success p {
+  margin: 0 0 0.5rem;
+  color: var(--success-text);
+}
+
+.form-feedback.success p:last-child { margin-bottom: 0; }
+
+.form-feedback.success .ref-num {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 0.125rem 0.375rem;
+  border-radius: 4px;
+}
+
+.form-feedback.error {
+  padding: 1rem 1.25rem;
+  background: #fef2f2;
+  border: 1px solid var(--error);
+  border-radius: var(--radius);
+  color: var(--error);
+  font-weight: 500;
+}
+
+/* ============================================
+   Policy page
+   ============================================ */
+
+.policy-content article {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.policy-header {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.policy-header h1 {
+  font-size: 2rem;
+  margin: 0 0 0.5rem;
+  color: var(--navy);
+  letter-spacing: -0.02em;
+}
+
+.policy-meta {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+}
+
+.policy-content h2 {
+  font-size: 1.375rem;
+  color: var(--navy);
+  margin: 2rem 0 0.75rem;
+}
+
+.policy-content h3 {
+  font-size: 1.125rem;
+  color: var(--navy);
+  margin: 1.5rem 0 0.5rem;
+}
+
+.policy-content p,
+.policy-content li {
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.policy-content p { margin: 0 0 1rem; }
+
+.placeholder-note {
+  background: var(--bg-soft);
+  border-left: 4px solid var(--yellow);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius);
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+
+.site-footer {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  padding: 2.5rem 0;
+  margin-top: 2rem;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.25rem;
+}
+
+.footer-brand { margin: 0; }
+
+.footer-logo {
+  height: 40px;
+  width: auto;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9375rem;
+}
+
+.footer-nav a:hover {
+  color: var(--green-dark);
+}
+
+.footer-copyright {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ============================================
+   Accessibility helpers
+   ============================================ */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+
+@media (max-width: 640px) {
+  .hero h1 { font-size: 1.75rem; }
+  .lede { font-size: 1rem; }
+  .rights-card,
+  .form-section,
+  .contact-card,
+  .policy-content article {
+    padding: 1.5rem 1.25rem;
+  }
+  .checkbox-group {
+    grid-template-columns: 1fr;
+  }
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .site-nav {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .main-content {
+    padding-top: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
