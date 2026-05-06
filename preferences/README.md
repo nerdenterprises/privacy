@@ -9,9 +9,12 @@ can be version-controlled and updated without WP overhead.
 ```
 nerd-privacy/
 ├── index.html                     ← redirects to /preferences
-├── preferences.html               ← DSAR (data rights request) form
-├── policy.html                    ← Privacy Policy (placeholder for Rick's content)
-├── tos.html                       ← Terms of Service (placeholder for Rick's content)
+├── preferences/
+│   └── index.html                 ← DSAR (data rights request) form
+├── policy/
+│   └── index.html                 ← Privacy Policy (placeholder for Rick's content)
+├── tos/
+│   └── index.html                 ← Terms of Service
 ├── CNAME                          ← privacy.nerdenterprises.com
 ├── assets/
 │   ├── styles.css                 ← Nerd-branded styles
@@ -23,6 +26,13 @@ nerd-privacy/
 │           └── index.ts           ← Edge Function (form submission handler)
 └── README.md
 ```
+
+All three user-facing pages use the same folder-based pattern. Resulting URLs:
+
+- `privacy.nerdenterprises.com/` → redirects to `/preferences`
+- `privacy.nerdenterprises.com/preferences` → DSAR form
+- `privacy.nerdenterprises.com/policy` → Privacy Policy
+- `privacy.nerdenterprises.com/tos` → Terms of Service
 
 ## How it works
 
