@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy — Nerd Enterprises</title>
-  <meta name="description" content="Privacy Policy for Nerd Enterprises, Inc. covering all products and services including Clean Books and Clean 1099s.">
+  <meta name="description" content="Privacy Policy for Nerd Enterprises, Inc. covering all products and services including Clean Books, Clean 1099s, and Clean Documents.">
   <link rel="icon" type="image/png" href="/assets/nerd-logo.png">
   <link rel="stylesheet" href="/assets/styles.css">
 </head>
@@ -33,7 +33,7 @@
         <p class="policy-meta">
           <strong>Effective Date:</strong> April 13, 2026
           &nbsp;&middot;&nbsp;
-          <strong>Last Updated:</strong> May 12, 2026
+          <strong>Last Updated:</strong> July 29, 2026
           &nbsp;&middot;&nbsp;
           <a href="https://nerdenterprises.com">nerdenterprises.com</a>
         </p>
@@ -49,6 +49,7 @@
         <ul>
           <li>Clean Books &mdash; AI-native accounting software (cleanbooks.app, books.nerdenterprises.com)</li>
           <li>Clean 1099s &mdash; 1099 information gathering and filing tool</li>
+          <li>Clean Documents &mdash; document collection, organization, and storage for accounting and bookkeeping firms (cleandocuments.app)</li>
           <li>The Nerd Enterprises website and any other tools, applications, or services we operate now or in the future under the nerdenterprises.com domain or the Clean by Nerd Enterprises brand family</li>
         </ul>
         <p>
@@ -83,7 +84,7 @@
           <li>Authentication provider information (e.g., if you sign in with Google, we receive your Google profile name and email)</li>
           <li>Password (stored securely as a hash &mdash; we never store your plain-text password)</li>
           <li>Subscription tier and billing contact information</li>
-          <li>Business name and contact details where applicable</li>
+          <li>Business or firm name, firm logo, and contact details where applicable</li>
         </ul>
 
         <h3>1.2 Data You Provide Through Our Products</h3>
@@ -91,6 +92,7 @@
         <ul>
           <li><strong>Clean Books:</strong> Financial records including chart of accounts, transactions, invoices, bills, payments, bank account information, contacts, documents, notes, and any other accounting data you create or import</li>
           <li><strong>Clean 1099s:</strong> Vendor and contractor information including names, addresses, taxpayer identification numbers (TINs), and payment amounts as required for 1099 filing</li>
+          <li><strong>Clean Documents:</strong> Financial documents you or your clients upload (such as invoices, receipts, and bank or credit-card statements), the contents of those files, and information extracted from them (such as vendor, date, document type, and descriptive tags)</li>
           <li><strong>Other products:</strong> Data relevant to the specific purpose of each tool</li>
         </ul>
         <p>
@@ -225,6 +227,12 @@
           Anthropic&rsquo;s Privacy Policy. AI features are triggered by your actions
           &mdash; we do not passively send your financial data to Anthropic.
         </p>
+        <p>
+          Clean Documents also uses the Claude API to automatically read, categorize, and
+          index the documents you upload. Document contents are processed solely to
+          perform this classification and are not used to train Anthropic&rsquo;s or any
+          other third party&rsquo;s models.
+        </p>
 
         <h3>4.5 Google Analytics</h3>
         <p>
@@ -234,6 +242,20 @@
           tracking by visiting Google&rsquo;s Ads Settings
           (<a href="https://www.google.com/settings/ads" rel="noopener">google.com/settings/ads</a>)
           or by downloading and installing the Google Analytics Opt-out Browser Add-on.
+        </p>
+
+        <h3>4.6 Vercel</h3>
+        <p>
+          Clean Documents is hosted on Vercel, an application hosting platform. Vercel
+          processes data only as necessary to serve the application to you, in accordance
+          with its own privacy and security policies.
+        </p>
+
+        <h3>4.7 Resend</h3>
+        <p>
+          We use Resend to send transactional emails such as account notifications and
+          service messages. Resend processes the email address and message contents
+          necessary to deliver these communications.
         </p>
       </section>
 
@@ -246,6 +268,7 @@
           <li>Process subscription payments via Stripe</li>
           <li>Connect to financial institutions via Plaid (Clean Books only)</li>
           <li>Generate 1099 tax forms (Clean 1099s only)</li>
+          <li>Store, read, categorize, and index uploaded documents (Clean Documents only)</li>
           <li>Send transactional emails &mdash; account confirmation, password reset, billing receipts</li>
           <li>Respond to support requests and communications</li>
           <li>Diagnose technical issues and improve product performance</li>
@@ -270,7 +293,7 @@
         </p>
         <p>We share data only in the following limited circumstances:</p>
         <ul>
-          <li><strong>Service providers:</strong> Supabase, Stripe, Plaid, and Anthropic receive data only as necessary to provide their respective services to us</li>
+          <li><strong>Service providers:</strong> Supabase, Vercel, Stripe, Plaid, Anthropic, and Resend receive data only as necessary to provide their respective services to us</li>
           <li><strong>Tax authorities:</strong> Clean 1099s may facilitate submission of tax information to the IRS as required by law and as directed by you</li>
           <li><strong>Legal compliance:</strong> We may disclose data if required by law, court order, or government authority</li>
           <li><strong>Business transfer:</strong> If Nerd Enterprises, Inc. is acquired or merged, your data may transfer as part of that transaction, subject to the same privacy protections</li>
@@ -284,6 +307,7 @@
           <li>All data transmitted to and from our applications is encrypted in transit using TLS</li>
           <li>Sensitive data is stored with encryption at rest</li>
           <li>Row-level security policies restrict access to your data</li>
+          <li>Clean Documents stores uploaded files in access-controlled, per-firm isolated storage</li>
           <li>Passwords are never stored in plain text</li>
           <li>Access to production systems is restricted to authorized personnel only</li>
           <li>We maintain a comprehensive Written Information Security Plan (WISP)</li>
@@ -312,6 +336,7 @@
           <li>Account identifiers and usage data are retained while your account is active and deleted 30 days after closure.</li>
           <li>Financial and billing records are retained for up to 7 years to comply with accounting laws, and sensitive tax information (such as W-9 data) is retained as required by IRS tax compliance regulations.</li>
           <li>Bank feed data linked to Plaid connections will be deleted upon account closure.</li>
+          <li>Documents uploaded to Clean Documents are retained while your account is active or as needed to provide the service and meet legal obligations. Deleting a document removes it from your account, and you may export a client&rsquo;s documents at any time.</li>
         </ul>
         <p>
           You may request deletion of your data at any time by contacting us at
